@@ -49,8 +49,7 @@
     { title: '7 Day Page Views by Source' },
   );
 ```
-
-![Line Screen Shot](https://raw.github.com/slajax/keen-graphs/master/examples/imgs/line.png)
+![Line Screen Shot](https://raw.github.com/slajax/keen-graphs/master/examples/imgs/pie.png)
 
 ---
 
