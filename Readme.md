@@ -24,6 +24,8 @@
 ```
 ![Count Screen Shot](https://raw.github.com/slajax/keen-graphs/master/examples/imgs/count.png)
 
+---
+
 ```javascript
   // Line Graphs
   new k.Line('#element-3', 'pageViews',
@@ -37,12 +39,16 @@
 ```
 [![Line Screen Shot](https://raw.github.com/slajax/keen-graphs/master/examples/imgs/line.png)]
 
+---
+
 ```javascript
   // Weekly Timeline
   new k.WeeklyTimeline('#element-5', 'pageViews');
 
 ```
 [![Timeline Screen Shot](https://raw.github.com/slajax/keen-graphs/master/examples/imgs/timeline.png)]
+
+---
 
 ## License
 
