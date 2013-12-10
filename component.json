@@ -1,0 +1,25 @@
+{
+  "name": "keen-graphs",
+  "repo": "slajax/keen-graphs",
+  "description": "A graphing library for Keen.io",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "mbostock/d3": "*",
+    "components/jquery": "1.10.2",
+    "jashkenas/underscore": "*",
+    "component/object": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js",
+    "graphs/count.js",
+    "graphs/line.js",
+    "graphs/timeline-weekly.js"
+  ],
+  "styles": [
+    "styles/style.css"
+  ]
+}
