@@ -17,8 +17,8 @@
 
 ```javascript
   // Block Counts
-  new k.Count('#element-1', 'pageViews', '7 Day View Count');
-  new k.Count('#element-2', 'pageViews', '14 Day View Count', {
+  new k.NumberChart('#element-1', 'pageViews', '7 Day View Count');
+  new k.NumberChart('#element-2', 'pageViews', '14 Day View Count', {
     timeframe: 'this_14_days'
   });
 ```
@@ -27,12 +27,12 @@
 ---
 
 ```javascript
-  // Line Graphs
-  new k.Line('#element-3', 'pageViews',
+  // Line Chart
+  new k.LineChart('#element-3', 'pageViews',
     { timeframe: 'this_7_days', interval: 'daily' },
     { title: '7 Day Page View Graph' },
   );
-  new k.Line('#element-4', 'pageViews',
+  new k.LineChart('#element-4', 'pageViews',
     { timeframe: 'last_24_hours', interval: 'hourly' },
     { title: 'Past Day Page View Graph' },
   );
@@ -41,9 +41,22 @@
 
 ---
 
+
 ```javascript
-  // Weekly Timeline
-  new k.WeeklyTimeline('#element-5', 'pageViews');
+  // Pie Chart
+  new k.PieChart('#element-5', 'pageViews',
+    { timeframe: 'this_7_days', interval: 'daily', group: 'source' },
+    { title: '7 Day Page Views by Source' },
+  );
+```
+
+![Line Screen Shot](https://raw.github.com/slajax/keen-graphs/master/examples/imgs/line.png)
+
+---
+
+```javascript
+  // Heatmap
+  new k.Heatmap('#element-6', 'pageViews');
 ```
 ![Timeline Screen Shot](https://raw.github.com/slajax/keen-graphs/master/examples/imgs/timeline.png)
 
