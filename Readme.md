@@ -37,7 +37,7 @@
     { title: 'Past Day Page View Graph' },
   );
 ```
-[![Line Screen Shot](https://raw.github.com/slajax/keen-graphs/master/examples/imgs/line.png)]
+![Line Screen Shot](https://raw.github.com/slajax/keen-graphs/master/examples/imgs/line.png)
 
 ---
 
@@ -46,7 +46,7 @@
   new k.WeeklyTimeline('#element-5', 'pageViews');
 
 ```
-[![Timeline Screen Shot](https://raw.github.com/slajax/keen-graphs/master/examples/imgs/timeline.png)]
+![Timeline Screen Shot](https://raw.github.com/slajax/keen-graphs/master/examples/imgs/timeline.png)
 
 ---
 
