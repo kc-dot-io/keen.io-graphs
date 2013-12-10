@@ -13,18 +13,12 @@ module.exports = function Graph(k) {
     var mDefaults = {
       analysisType: "count",
       timeframe: "this_7_days",
-      targetProperty: "id",
-      groupBy: "vendor_id",
       filter: []
     };
 
     var cDefaults = {
-      height: 300,
-      width: 600,
       minimumSlicePercentage: 5,
-      colors: ["orange", "green", "#fef584"],
       backgroundColor: "transparent",
-      title: "Total Purchases Previous 7 Days By Device",
     };
 
     var o = require('object');
