@@ -22,7 +22,7 @@
     timeframe: 'this_14_days'
   });
 ```
-[![Count Screen Shot](https://raw.github.com/slajax/keen-graphs/master/examples/imgs/count.png)]
+![Count Screen Shot](https://raw.github.com/slajax/keen-graphs/master/examples/imgs/count.png)
 
 ```javascript
   // Line Graphs
