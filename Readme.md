@@ -41,7 +41,7 @@
 ---
 
 #### Count Graph
-  [CountScreenShot](https://raw.github.com/slajax/keen-graphs/master/examples/imgs/count.png)
+  [![CountScreenShot]](https://raw.github.com/slajax/keen-graphs/master/examples/imgs/count.png)
 
 
 ## License
