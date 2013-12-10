@@ -1,5 +1,5 @@
 
-# keenio-graphs
+# keen-graphs
 
   A graphing library for Keen.io
 
