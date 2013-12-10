@@ -5,7 +5,7 @@ var d3 = require('d3')
 
 module.exports = function KeenGraph(k) {
 
-  return function WeeklyTimelineGraph(el, metric, options) {
+  return function WeeklyTimelineGraph(el, metric, label, options) {
 
     var defaults = {
       analysisType: 'count',
@@ -87,7 +87,7 @@ module.exports = function KeenGraph(k) {
           .attr('font-weight', 'bold')
           .attr('stroke', 'none')
           .attr('fill', '#000')
-          .text('Something or Something');
+          .text(label || 'Heatmap');
 
       var intervals = svg.append('g')
         .attr('dy', y_offset+40)
