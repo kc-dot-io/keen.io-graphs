@@ -5,7 +5,7 @@ var d3 = require('d3')
 
 module.exports = function Graph(k) {
 
-  function CountGraph(el, metric, label,  options) {
+  function NumberGraph(el, metric, label,  options) {
 
     var defaults = {
       analysisType: 'count',
@@ -27,5 +27,5 @@ module.exports = function Graph(k) {
 
   }
 
-  return CountGraph;
+  return NumberGraph;
 };

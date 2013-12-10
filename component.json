@@ -15,9 +15,10 @@
   "main": "index.js",
   "scripts": [
     "index.js",
-    "graphs/count.js",
+    "graphs/number.js",
     "graphs/line.js",
-    "graphs/timeline-weekly.js"
+    "graphs/pie.js",
+    "graphs/heatmap.js"
   ],
   "styles": [
     "styles/style.css"

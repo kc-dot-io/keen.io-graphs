@@ -25,9 +25,10 @@ module.exports = function KeenGraph(k) {
 
     var stackedTimeline = function(data){
 
-      var unit = 20
+      var y_offset = 60
+        , unit = 20
         , width = unit * 25
-        , height = unit * 9;
+        , height = unit * 9 + y_offset;
 
       var days = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
       var day = d3.time.format('%w')
@@ -76,7 +77,20 @@ module.exports = function KeenGraph(k) {
         .attr('width', width)
         .attr('height', height)
 
-      var intervals = svg.append("g")
+      var title = svg.append('g')
+        .append('text')
+          .attr('text-anchor', 'start')
+          .attr('x', 20)
+          .attr('y', y_offset - 15)
+          .attr('font-family', 'Arial')
+          .attr('font-size', '12')
+          .attr('font-weight', 'bold')
+          .attr('stroke', 'none')
+          .attr('fill', '#000')
+          .text('Something or Something');
+
+      var intervals = svg.append('g')
+        .attr('dy', y_offset+40)
         .attr('class', 'intervals')
         .attr('transform', 'translate(' + unit + ',' + (unit/2) + ')')
 
@@ -86,7 +100,7 @@ module.exports = function KeenGraph(k) {
         .attr('class', 'dates')
         .attr('transform', function(d,i){ return 'translate(' + -1*unit + ',' + (i*unit) + ')' })
         .append('text')
-          .attr('dy', unit/2*1.3)
+          .attr('dy', unit/2*1.3+y_offset)
           .attr('dx', unit/2)
           .attr('font-size', unit/2*1.2)
           .attr('font-weight', 'bold')
@@ -99,7 +113,7 @@ module.exports = function KeenGraph(k) {
         .attr('class', 'times')
         .attr('transform', function(d,i){ return 'translate(' + (i*(unit*3)) + ',' + unit*7.5 + ')' })
         .append('text')
-          .attr('dy', 0)
+          .attr('dy', 0+y_offset)
           .attr('dx', unit/2*.8)
           .attr('fill', '#808080')
           .attr('font-size', unit/2*1.1)
@@ -119,7 +133,7 @@ module.exports = function KeenGraph(k) {
           } else {
             y = vertical_offset
           }
-          return 'translate(' + hour(d.date) * 20 + ',' + (y * 20) + ')';
+          return 'translate(' + hour(d.date) * 20 + ',' + (y * 20 + y_offset) + ')';
         })
         .append('rect')
           .attr('shape-rendering', 'crispEdges')

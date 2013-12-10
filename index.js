@@ -1,9 +1,10 @@
 module.exports = function KeenGraphs(k) {
 
   return {
-    Count: require('./graphs/count')(k),
-    Line: require('./graphs/line')(k),
-    WeeklyTimeline: require('./graphs/timeline-weekly')(k)
+    PieChart: require('./graphs/pie')(k),
+    LineChart: require('./graphs/line')(k),
+    NumberChart: require('./graphs/number')(k),
+    HeatmapChart: require('./graphs/heatmap')(k)
   };
 
 };
