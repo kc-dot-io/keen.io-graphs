@@ -7,7 +7,7 @@
 
   Install with [component(1)](http://component.io):
 
-    $ component install slajax/keenio-graphs
+    $ component install slajax/keen-graphs
 
 ## API
 
