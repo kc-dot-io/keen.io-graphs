@@ -51,7 +51,7 @@
 
 ## Attribution
 
-  Thanks to [Dustin Larimer][http://dustinlarimer.com] for his [original work](https://gist.github.com/dustinlarimer/7853815) on the Timeline Heatmap.
+  Thanks to [Dustin Larimer](http://dustinlarimer.com) for his [original work](https://gist.github.com/dustinlarimer/7853815) on the Timeline Heatmap.
 
 ---
 
