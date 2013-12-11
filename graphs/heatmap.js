@@ -28,10 +28,11 @@ module.exports = function KeenGraph(k) {
         // data.result.timeframe.start
         // data.result.timeframe.end
 
+        var y_offset = 55;
+        var x_offset = 55;
         var width = options.width || 500;
-        height = width * .5 + 60;
-        unit = width / 25;
-        y_offset = 55;
+        height = options.height || (width * .5 + 60);
+        unit = options.unit || (width - x_offset) / 26;
 
         var days = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
         var day = d3.time.format('%w')
@@ -84,6 +85,7 @@ module.exports = function KeenGraph(k) {
         .append('text')
           .attr('text-anchor', 'start')
           .attr('y', y_offset-15)
+          .attr('x', x_offset)
           .attr('font-family', 'Arial')
           .attr('font-size', '12')
           .attr('font-weight', 'bold')
@@ -93,7 +95,7 @@ module.exports = function KeenGraph(k) {
 
         var intervals = svg.append("g")
           .attr('class', 'intervals')
-          .attr('transform', 'translate(' + unit + ',' + (unit/2+y_offset) + ')')
+          .attr('transform', 'translate(' + (unit+x_offset) + ',' + (unit/2+y_offset) + ')')
 
         var date_label = intervals.selectAll('g.dates')
           .data(date_range)
