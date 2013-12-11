@@ -1,0 +1,26 @@
+{
+  "name": "keen.io-graphs",
+  "repo": "slajax/keen.io-graphs",
+  "description": "An abstracted graphing library for Keen.io",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "mbostock/d3": "*",
+    "components/jquery": "1.10.2",
+    "jashkenas/underscore": "*",
+    "component/object": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js",
+    "graphs/number.js",
+    "graphs/line.js",
+    "graphs/pie.js",
+    "graphs/heatmap.js"
+  ],
+  "styles": [
+    "styles/style.css"
+  ]
+}
