@@ -16,7 +16,7 @@ module.exports = function KeenGraph(k) {
     var o = require('object');
     var options = o.merge(defaults, options);
 
-    $(el).html('Loading...');
+    $(el).html('<br/> <br/> Loading Heatmap...');
     this.series = new k.Series(metric, options);
     this.series.getResponse(function(data){
       stackedTimeline(data);
@@ -31,7 +31,7 @@ module.exports = function KeenGraph(k) {
         var width = options.width || 500;
         height = width * .5 + 60;
         unit = width / 25;
-        y_offset = 50;
+        y_offset = 55;
 
         var days = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
         var day = d3.time.format('%w')
