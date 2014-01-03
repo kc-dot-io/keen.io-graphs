@@ -5,22 +5,25 @@ var d3 = require('d3')
 
 module.exports = function Graph(k) {
 
-  function NumberGraph(el, metric, label,  options) {
+  function NumberGraph(el, metric, mOptions, cOptions) {
 
-    var defaults = {
+    var mDefaults = {
       analysisType: 'count',
       timeframe: 'this_7_days',
       interval: 'hourly',
       filter: []
     };
 
-    var o = require('object');
-    options = o.merge(defaults, options);
+    var cDefaults = {
+      label: 'Number'
+    };
 
-    var m = new Keen.Metric(metric, options);
-    var c = new Keen.Number(m, {
-      label: label
-    });
+    var o = require('object');
+    mOptions = o.merge(mDefaults, mOptions);
+    cOptions = o.merge(cDefaults, cOptions);
+
+    var m = new Keen.Metric(metric, mOptions);
+    var c = new Keen.Number(m, cOptions);
 
     if($(el).length) c.draw( $(el)[0]);
     else console.error(el, 'could not found');
