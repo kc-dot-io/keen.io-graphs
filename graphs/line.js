@@ -14,7 +14,7 @@ module.exports = function Graph(k) {
       analysisType: 'count',
       timeframe: 'last_60_minutes',
       interval: 'minutely',
-      filter: []
+      filters: []
     };
 
     var cDefaults = {

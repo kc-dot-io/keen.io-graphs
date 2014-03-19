@@ -11,7 +11,7 @@ module.exports = function Graph(k) {
       analysisType: 'count',
       timeframe: 'this_7_days',
       interval: 'hourly',
-      filter: []
+      filters: []
     };
 
     var cDefaults = {

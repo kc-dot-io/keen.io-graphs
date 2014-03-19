@@ -13,7 +13,7 @@ module.exports = function Graph(k) {
     var mDefaults = {
       analysisType: "count",
       timeframe: "this_7_days",
-      filter: []
+      filters: []
     };
 
     var cDefaults = {
