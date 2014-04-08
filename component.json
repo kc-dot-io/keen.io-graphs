@@ -15,10 +15,10 @@
   "main": "index.js",
   "scripts": [
     "index.js",
-    "graphs/number.js",
-    "graphs/line.js",
-    "graphs/pie.js",
-    "graphs/heatmap.js"
+    "lib/graphs/number.js",
+    "lib/graphs/line.js",
+    "lib/graphs/pie.js",
+    "lib/graphs/heatmap.js"
   ],
   "styles": [
     "styles/style.css"
