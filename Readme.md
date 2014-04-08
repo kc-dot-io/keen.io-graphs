@@ -13,10 +13,21 @@
 
 ```javascript
   var keen = require('keen.io-graphs')(Keen); // inject configured keen.io obj
-  var graphs = keen.graphs;
+
+  keen.getSeries('pageViews', { groupBy: 'device' },
+    function joinData(data, next) {
+      data = _.filter(data.result, function(d)) { return d.value[0].type === 'mobile' });
+      next(data);
+    },
+    function showData(data) {
+      // ... do some d3 magic ...
+    }
+  );
+
 ```
 
 ```javascript
+  var graphs = keen.graphs;
   // Block Counts
   new graphs.number('#element-1', 'pageViews', '7 Day View Count');
   new graphs.number('#element-2', 'pageViews', '14 Day View Count', {
@@ -28,6 +39,7 @@
 ---
 
 ```javascript
+  var graphs = keen.graphs;
   // Line Chart
   new graphs.line('#element-3', 'pageViews',
     { timeframe: 'this_7_days', interval: 'daily' },
@@ -44,6 +56,7 @@
 
 
 ```javascript
+  var graphs = keen.graphs;
   // Pie Chart
   new graphs.pie('#element-5', 'pageViews',
     { timeframe: 'this_7_days', interval: 'daily', group: 'source' },
@@ -55,6 +68,7 @@
 ---
 
 ```javascript
+  var graphs = keen.graphs;
   // Heatmap
   new keen.heatmap('#element-6', 'pageViews');
 ```
