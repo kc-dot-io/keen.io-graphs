@@ -16,8 +16,10 @@
 
   keen.getSeries('pageViews', { groupBy: 'device' },
     function joinData(data, next) {
-      data = _.filter(data.result, function(d)) { return d.value[0].type === 'mobile' });
-      next(data);
+      var mobile = _.filter(data.result, function(d) {
+        return d.value[0].type === 'mobile';
+      });
+      next(mobile);
     },
     function showData(data) {
       // ... do some d3 magic ...
