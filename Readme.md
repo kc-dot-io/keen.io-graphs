@@ -29,8 +29,8 @@
 ```
 
 ```javascript
-  var graphs = keen.graphs;
   // Block Counts
+  var graphs = keen.graphs;
   new graphs.number('#element-1', 'pageViews', '7 Day View Count');
   new graphs.number('#element-2', 'pageViews', '14 Day View Count', {
     timeframe: 'this_14_days'
@@ -41,8 +41,8 @@
 ---
 
 ```javascript
-  var graphs = keen.graphs;
   // Line Chart
+  var graphs = keen.graphs;
   new graphs.line('#element-3', 'pageViews',
     { timeframe: 'this_7_days', interval: 'daily' },
     { title: '7 Day Page View Graph' },
@@ -58,8 +58,8 @@
 
 
 ```javascript
-  var graphs = keen.graphs;
   // Pie Chart
+  var graphs = keen.graphs;
   new graphs.pie('#element-5', 'pageViews',
     { timeframe: 'this_7_days', interval: 'daily', group: 'source' },
     { title: '7 Day Page Views by Source' },
@@ -70,8 +70,8 @@
 ---
 
 ```javascript
-  var graphs = keen.graphs;
   // Heatmap
+  var graphs = keen.graphs;
   new keen.heatmap('#element-6', 'pageViews');
 ```
 ![Timeline Screen Shot](https://raw.github.com/slajax/keen.io-graphs/master/examples/imgs/timeline.png)
