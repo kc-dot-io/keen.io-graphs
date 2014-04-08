@@ -15,13 +15,13 @@
   var keen = require('keen.io-graphs')(Keen); // inject configured keen.io obj
 
   keen.getSeries('pageViews', { groupBy: 'device' },
-    function joinData(data, next) {
+    function getMobileData(data, next) {
       var mobile = _.filter(data.result, function(d) {
         return d.value[0].type === 'mobile';
       });
       next(mobile);
     },
-    function showData(data) {
+    function showMobileData(data) {
       // ... do some d3 magic ...
     }
   );
