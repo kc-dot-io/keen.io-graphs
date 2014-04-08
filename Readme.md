@@ -12,13 +12,14 @@
 ## API
 
 ```javascript
-  var k = require('keen.io-graphs')(Keen); // inject configured keen.io obj
+  var keen = require('keen.io-graphs')(Keen); // inject configured keen.io obj
+  var graphs = keen.graphs;
 ```
 
 ```javascript
   // Block Counts
-  new k.NumberChart('#element-1', 'pageViews', '7 Day View Count');
-  new k.NumberChart('#element-2', 'pageViews', '14 Day View Count', {
+  new graphs.number('#element-1', 'pageViews', '7 Day View Count');
+  new graphs.number('#element-2', 'pageViews', '14 Day View Count', {
     timeframe: 'this_14_days'
   });
 ```
@@ -28,11 +29,11 @@
 
 ```javascript
   // Line Chart
-  new k.LineChart('#element-3', 'pageViews',
+  new graphs.line('#element-3', 'pageViews',
     { timeframe: 'this_7_days', interval: 'daily' },
     { title: '7 Day Page View Graph' },
   );
-  new k.LineChart('#element-4', 'pageViews',
+  new graphs.line('#element-4', 'pageViews',
     { timeframe: 'last_24_hours', interval: 'hourly' },
     { title: 'Past Day Page View Graph' },
   );
@@ -44,7 +45,7 @@
 
 ```javascript
   // Pie Chart
-  new k.PieChart('#element-5', 'pageViews',
+  new graphs.pie('#element-5', 'pageViews',
     { timeframe: 'this_7_days', interval: 'daily', group: 'source' },
     { title: '7 Day Page Views by Source' },
   );
@@ -55,7 +56,7 @@
 
 ```javascript
   // Heatmap
-  new k.Heatmap('#element-6', 'pageViews');
+  new keen.heatmap('#element-6', 'pageViews');
 ```
 ![Timeline Screen Shot](https://raw.github.com/slajax/keen.io-graphs/master/examples/imgs/timeline.png)
 

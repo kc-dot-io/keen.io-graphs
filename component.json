@@ -2,7 +2,7 @@
   "name": "keen.io-graphs",
   "repo": "slajax/keen.io-graphs",
   "description": "An abstracted graphing library for Keen.io",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": [],
   "dependencies": {
     "mbostock/d3": "*",
