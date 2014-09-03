@@ -3,6 +3,11 @@
 
   An abstracted graphing library for Keen.io
 
+## NOTICE
+
+  This plugin requires you to implement [KeenJS v2](https://github.com/keenlabs/keen-js/tree/v2).
+  This repo probably will not be updated to v3 so it's highly recommended you use Keen's v3 library directly.
+
 ## Installation
 
   Install with [component(1)](http://component.io):
